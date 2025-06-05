@@ -33,6 +33,20 @@
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.2); }
     }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #d63384;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #b02a6f;
+    }
   </style>
 </head>
 <body>
@@ -41,14 +55,16 @@
   <div class="heart">❤️</div>
   <p><strong>¡Te extraño muchísimo!</strong></p>
   <p>Y no veo la hora de volver a verte.</p>
-<!-- Música de fondo desde YouTube -->
-<div style="display:none;">
-  <iframe width="0" height="0" 
-    src="https://www.youtube.com/embed/oie3H4ocMCc?autoplay=1&loop=1&playlist=oie3H4ocMCc" 
-    frameborder="0" 
-    allow="autoplay" 
-    allowfullscreen>
+
+  <h2>Haz clic para acompañar el mensaje con música 🎶</h2>
+  <button onclick="document.getElementById('player').src += '&autoplay=1'; this.style.display='none';">
+    ▶️ Reproducir música
+  </button>
+
+  <iframe id="player" width="0" height="0" 
+    src="https://www.youtube.com/embed/oie3H4ocMCc?loop=1&playlist=oie3H4ocMCc"
+    frameborder="0" allow="autoplay" allowfullscreen>
   </iframe>
-</div>
 </body>
 </html>
+
